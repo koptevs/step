@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Button } from "@/components/ui/button"
 
 export default function Home() {
   return (
@@ -49,6 +50,13 @@ export default function Home() {
           >
             Read our docs
           </a>
+          <Button><Image
+              className="dark:invert"
+              src="/vercel.svg"
+              alt="Vercel logomark"
+              width={20}
+              height={20}
+            />shadcn/iu</Button>
         </div>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
