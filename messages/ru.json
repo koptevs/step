@@ -1,0 +1,26 @@
+{
+    "HomePage": {
+        "title": "Привет Мир!",
+        "about": "На страницу о нас.",
+        "home-link": "На главную",
+        "description": "<p>RU_This is a basic example that demonstrates the usage of <code>next-intl</code> with the Next.js App Router.</p> <test>Try changing</test> the locale in the top right corner and see how the content changes."
+    },
+    "Manifest": {
+        "name": "Step app"
+    },
+    "RootLayoutMeta": {
+        "title": "Step app ru",
+        "description": "Step application ru"
+    },
+    "NotFoundPage": {
+        "description": "Please double-check the browser address bar or use the navigation to go to a known page.",
+        "title": "Страница не найдена."
+    },
+
+    "ModeToggle": {
+        "screen-reader-text": "",
+        "light": "Светлая",
+        "dark": "Тёмная",
+        "system": "Системная"
+    }
+}

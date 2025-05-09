@@ -1,18 +1,17 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
+'use client';
 
-export const metadata: Metadata = {
-    title: 'Page Not Found',
-};
+import Error from 'next/error';
 
-export default function NotFound() {
+// This page renders when a route like `/unknown.txt` is requested.
+// In this case, the layout at `app/[locale]/layout.tsx` receives
+// an invalid value as the `[locale]` param and calls `notFound()`.
+
+export default function GlobalNotFound() {
     return (
-        <div className="flex h-dvh flex-col items-center justify-center">
-            <h2>Not Found</h2>
-            <p>Could not find requested resource</p>
-            <Link className="text-indigo-700 hover:underline" href="/">
-                Return Home
-            </Link>
-        </div>
+        <html lang="en">
+            <body>
+                <Error statusCode={404} />
+            </body>
+        </html>
     );
 }

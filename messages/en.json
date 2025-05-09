@@ -1,0 +1,25 @@
+{
+    "HomePage": {
+        "title": "Hello world!",
+        "about": "Go to the about page",
+        "home-link": "Home",
+        "description": "<p>EN_This is a basic example that demonstrates the usage of <code>next-intl</code> with the Next.js App Router.</p> <test>Try changing</test> the locale in the top right corner and see how the content changes."
+    },
+    "Manifest": {
+        "name": "Step app"
+    },
+    "RootLayoutMeta": {
+        "title": "Step app",
+        "description": "Step application"
+    },
+    "NotFoundPage": {
+        "description": "Please double-check the browser address bar or use the navigation to go to a known page.",
+        "title": "Page not found"
+    },
+    "ModeToggle": {
+        "screen-reader-text": "",
+        "light": "Light",
+        "dark": "Dark",
+        "system": "System"
+    }
+}
