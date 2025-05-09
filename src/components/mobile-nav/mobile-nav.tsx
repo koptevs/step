@@ -32,7 +32,7 @@ const MobileNav = () => {
                         <Link
                             href="/"
                             className="flex items-center justify-center gap-2"
-                        >
+                            legacyBehavior>
                             <Image
                                 src="/assets/images/site-logo.png"
                                 width={23}

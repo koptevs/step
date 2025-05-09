@@ -16,6 +16,17 @@ export default function Error({ error, reset }: Props) {
     }, [error]);
 
     return (
+        // <div>
+        //     <h2>Message from @/app/error.tsx: Something went wrong!</h2>
+        //     <button
+        //         onClick={
+        //             // Attempt to recover by trying to re-render the segment
+        //             () => reset()
+        //         }
+        //     >
+        //         Try again
+        //     </button>
+        // </div>
         <div>
             {t.rich('description', {
                 p: (chunks) => <p className="mt-4">{chunks}</p>,
@@ -30,16 +41,5 @@ export default function Error({ error, reset }: Props) {
                 ),
             })}
         </div>
-        // <div>
-        //     <h2>Message from @/app/error.tsx: Something went wrong!</h2>
-        //     <button
-        //         onClick={
-        //             // Attempt to recover by trying to re-render the segment
-        //             () => reset()
-        //         }
-        //     >
-        //         Try again
-        //     </button>
-        // </div>
     );
 }

@@ -43,6 +43,7 @@ export default async function RootLayout({
 
     return (
         // <AuthProvider>
+        // </AuthProvider>
         <html lang={locale} suppressHydrationWarning>
             {/* <body className={`${inter.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}> */}
             <body
@@ -68,6 +69,5 @@ export default async function RootLayout({
                 </NextIntlClientProvider>
             </body>
         </html>
-        // </AuthProvider>
     );
 }
