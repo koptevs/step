@@ -3,7 +3,7 @@ import localFont from 'next/font/local';
 
 export const inter = Inter({
     variable: '--font-inter',
-    subsets: ['latin'],
+    subsets: ['latin', 'cyrillic'],
 });
 
 export const geistSans = Geist({

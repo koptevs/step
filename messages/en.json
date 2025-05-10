@@ -4,11 +4,25 @@
         "home-link": "Go to the home page",
         "about": "About",
         "about-link": "Go to the about page",
-        "services": "Services",
-        "services-description": "<div>STEP</div><p>Beautifully designed components built with Radix UI and Tailwind CSS.</p>"
+        "services": {
+            "title": "Services",
+            "description": "<div>STEP</div><p>Beautifully designed components built with Radix UI and Tailwind CSS.</p>",
+            "design": {
+                "title": "Design",
+                "description": ""
+            },
+            "development": {
+                "title": "Development",
+                "description": ""
+            },
+            "support": {
+                "title": "Support",
+                "description": ""
+            }
+        }
     },
     "HomePage": {
-        "title": "Hello world!",
+        "title": "Home page",
         "description": "<p>EN_This is a basic example that demonstrates the usage of <code>next-intl</code> with the Next.js App Router.</p> <test>Try changing</test> the locale in the top right corner and see how the content changes."
     },
     "AboutPage": {

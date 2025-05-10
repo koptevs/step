@@ -61,7 +61,6 @@ const components: { title: string; href: string; description: string }[] = [
 export function TopNavbar() {
     const pathname = usePathname();
     const t = useTranslations('Navigation');
-
     return (
         <nav className="container mx-auto flex h-[56px] justify-between px-2">
             {/* <div className="flex items-center">LOGO</div> */}
@@ -69,6 +68,7 @@ export function TopNavbar() {
                 href="/"
                 className="flex min-w-max items-center justify-center gap-2"
             >
+                {/* <pre>{JSON.stringify(t, null, 4)}</pre> */}
                 <Image
                     src="/globe.svg"
                     alt="Site Logo"
@@ -100,7 +100,7 @@ export function TopNavbar() {
                                 'font-bold': false,
                             })}
                         >
-                            {t('services')}
+                            {t('services.title')}
                         </NavigationMenuTrigger>
                         <NavigationMenuContent>
                             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
@@ -113,13 +113,15 @@ export function TopNavbar() {
                                             {/* <Icons.logo className="h-6 w-6" /> */}
                                             <div className="flex h-full w-full items-center justify-center">
                                                 <Image
+                                                    className="dark:invert"
                                                     src="\globe.svg"
                                                     alt="Site Logo"
                                                     width={80}
                                                     height={80}
+                                                    priority
                                                 />
                                             </div>
-                                            {t.rich('services-description', {
+                                            {t.rich('services.description', {
                                                 div: (chunks) => (
                                                     <div className="mt-4 mb-2 text-center text-lg font-medium">
                                                         {chunks}
@@ -134,20 +136,23 @@ export function TopNavbar() {
                                         </Link>
                                     </NavigationMenuLink>
                                 </li>
-                                <ListItem href="/docs" title="Introduction">
+                                <ListItem
+                                    href="/docs"
+                                    title={t('services.design.title')}
+                                >
                                     Re-usable components built using Radix UI
                                     and Tailwind CSS.
                                 </ListItem>
                                 <ListItem
                                     href="/docs/installation"
-                                    title="Installation"
+                                    title={t('services.development.title')}
                                 >
                                     How to install dependencies and structure
                                     your app.
                                 </ListItem>
                                 <ListItem
                                     href="/docs/primitives/typography"
-                                    title="Typography"
+                                    title={t('services.support.title')}
                                 >
                                     Styles for headings, paragraphs, lists...etc
                                 </ListItem>

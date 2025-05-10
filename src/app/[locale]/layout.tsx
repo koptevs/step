@@ -47,7 +47,8 @@ export default async function RootLayout({
             {/* <body className={`${inter.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}> */}
             <body
                 className={cn(
-                    'font-inter antialiased',
+                    inter.className,
+                    'text-[15px] antialiased',
                     notoSansRegular.variable,
                     geistSans.variable,
                     geistMono.variable,

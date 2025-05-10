@@ -11,7 +11,9 @@ export default function RootLayout({ children }: Props) {
     return (
         <main>
             <TopNavbar />
-            <div className="container mx-auto px-2">{children}</div>
+            <div className="container mx-auto px-2 font-[family-name:var(--font-inter)]">
+                {children}
+            </div>
         </main>
     );
 }
