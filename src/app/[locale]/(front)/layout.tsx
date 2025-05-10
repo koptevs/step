@@ -1,3 +1,4 @@
+import { TopNavbar } from '@/components/top-navbar';
 import { ReactNode } from 'react';
 
 type Props = {
@@ -8,9 +9,9 @@ type Props = {
 // is required, even if it's just passing children through.
 export default function RootLayout({ children }: Props) {
     return (
-        <div>
-            <p>Layout</p>
-            {children}
-        </div>
+        <main>
+            <TopNavbar />
+            <div className="container mx-auto px-2">{children}</div>
+        </main>
     );
 }

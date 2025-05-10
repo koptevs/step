@@ -1,7 +1,8 @@
 'use client';
 
 import * as React from 'react';
-import { Link } from '@/i18n/navigation';
+import { Link, usePathname } from '@/i18n/navigation';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 import { cn } from '@/lib/utils';
@@ -17,6 +18,7 @@ import {
 } from '@/components/ui/navigation-menu';
 import { ModeToggle } from '@/components/mode-toggle';
 import MobileNav from '@/components/mobile-nav/mobile-nav';
+import LocaleSwitcher from '@/components/locale-switcher';
 
 const components: { title: string; href: string; description: string }[] = [
     {
@@ -57,39 +59,48 @@ const components: { title: string; href: string; description: string }[] = [
 ];
 
 export function TopNavbar() {
+    const pathname = usePathname();
+    const t = useTranslations('Navigation');
+
     return (
-        <div className="container mx-auto flex h-[56px] justify-between">
+        <nav className="container mx-auto flex h-[56px] justify-between px-2">
             {/* <div className="flex items-center">LOGO</div> */}
             <Link
                 href="/"
                 className="flex min-w-max items-center justify-center gap-2"
             >
                 <Image
-                    src="/assets/images/site-logo.png"
+                    src="/globe.svg"
                     alt="Site Logo"
                     width={20}
                     height={20}
                 />
                 <div className="py-2 font-bold">
-                    NEXT-
-                    <span className="text-orange-600">TUV</span>
+                    <span className="text-orange-600">S</span>TEP
                 </div>
             </Link>
             <NavigationMenu className="max-sm:hidden">
                 <NavigationMenuList>
                     {' '}
                     <NavigationMenuItem>
-                        <Link href="/" legacyBehavior passHref>
+                        <Link href="/" passHref>
                             <NavigationMenuLink
-                                className={navigationMenuTriggerStyle()}
+                                title={t('home-link')}
+                                className={cn(navigationMenuTriggerStyle(), {
+                                    'font-bold underline': pathname === '/',
+                                })}
                             >
-                                Home
+                                {t('home')}
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                        <NavigationMenuTrigger>
-                            Getting started
+                        <NavigationMenuTrigger
+                            className={cn(navigationMenuTriggerStyle(), {
+                                'font-bold': false,
+                            })}
+                        >
+                            {t('services')}
                         </NavigationMenuTrigger>
                         <NavigationMenuContent>
                             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
@@ -100,14 +111,26 @@ export function TopNavbar() {
                                             href="/"
                                         >
                                             {/* <Icons.logo className="h-6 w-6" /> */}
-                                            <div className="mt-4 mb-2 text-lg font-medium">
-                                                shadcn/ui
+                                            <div className="flex h-full w-full items-center justify-center">
+                                                <Image
+                                                    src="\globe.svg"
+                                                    alt="Site Logo"
+                                                    width={80}
+                                                    height={80}
+                                                />
                                             </div>
-                                            <p className="text-muted-foreground text-sm leading-tight">
-                                                Beautifully designed components
-                                                built with Radix UI and Tailwind
-                                                CSS.
-                                            </p>
+                                            {t.rich('services-description', {
+                                                div: (chunks) => (
+                                                    <div className="mt-4 mb-2 text-center text-lg font-medium">
+                                                        {chunks}
+                                                    </div>
+                                                ),
+                                                p: (chunks) => (
+                                                    <p className="text-muted-foreground text-sm leading-tight">
+                                                        {chunks}
+                                                    </p>
+                                                ),
+                                            })}
                                         </Link>
                                     </NavigationMenuLink>
                                 </li>
@@ -150,7 +173,7 @@ export function TopNavbar() {
                         </NavigationMenuContent>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                        <Link href="/dashboard" legacyBehavior passHref>
+                        <Link href="/dashboard" passHref>
                             <NavigationMenuLink
                                 className={navigationMenuTriggerStyle()}
                             >
@@ -161,18 +184,24 @@ export function TopNavbar() {
                     <NavigationMenuItem>
                         <Link href="/about" passHref>
                             <NavigationMenuLink
-                                className={navigationMenuTriggerStyle()}
+                                title={t('about-link')}
+                                className={cn(navigationMenuTriggerStyle(), {
+                                    'font-bold underline':
+                                        pathname === '/about',
+                                })}
                             >
-                                About
+                                {t('about')}
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
                 </NavigationMenuList>
                 <div className="ml-8"></div>
+                <LocaleSwitcher />
+                <div className="ml-1"></div>
                 <ModeToggle />
             </NavigationMenu>
             <MobileNav />
-        </div>
+        </nav>
     );
 }
 

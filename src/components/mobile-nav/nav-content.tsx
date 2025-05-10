@@ -1,35 +1,41 @@
 'use client';
 import React from 'react';
-import { usePathname } from 'next/navigation';
+// import { usePathname } from 'next/navigation';
 import { Slot } from '@radix-ui/react-slot';
 import { SheetClose } from '@/components/ui/sheet';
-import { Home, Beer, Calendar } from 'lucide-react';
+import { Home, Calendar, BookUser } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { Link } from '@/i18n/navigation';
+// import Link from "next/link";
+import { useTranslations } from 'next-intl';
+import { Link, usePathname } from '@/i18n/navigation';
+import { TypePath } from '@/i18n/routing';
+
+// import { useLocale } from 'next-intl';
 
 const NavContent = () => {
     const pathname = usePathname();
-    console.log(pathname, typeof pathname);
+    const t = useTranslations('Navigation');
+    // const locale = useLocale();
 
     const navLinks: {
         icon: React.ReactNode;
-        path: '/' | '/about';
+        path: TypePath;
         label: string;
     }[] = [
         {
             icon: <Home />,
             path: '/',
-            label: 'Home',
+            label: t('home'),
         },
         {
             icon: <Calendar />,
-            path: '/about',
+            path: '/dashboard',
             label: 'Dashboard',
         },
         {
-            icon: <Beer />,
+            icon: <BookUser />,
             path: '/about',
-            label: 'About',
+            label: t('about'),
         },
     ];
     return (
@@ -42,7 +48,6 @@ const NavContent = () => {
                     <SheetClose asChild key={item.path}>
                         <Link
                             href={item.path}
-                            // href={item.path}
                             // className="flex gap-2"
                             className={cn(
                                 'flex w-full items-center justify-start gap-3 px-6 py-3',
@@ -61,7 +66,7 @@ const NavContent = () => {
 
                             <span
                                 className={cn('', {
-                                    'font-bold': isActive,
+                                    'font-medium': isActive,
                                 })}
                             >
                                 {item.label}

@@ -16,3 +16,6 @@ export const routing = defineRouting({
         },
     },
 });
+
+export type TypeLocale = typeof routing.defaultLocale; // "ru" | "lv" | "en"
+export type TypePath = keyof typeof routing.pathnames; // "/" | "/dashboard" | "/about"

@@ -1,6 +1,12 @@
 'use client';
 
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import {
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from '@/components/ui/select';
 import { routing } from '@/i18n/routing';
 import { useRouter, usePathname } from '@/i18n/navigation';
 import { useParams } from 'next/navigation';
@@ -18,6 +24,8 @@ export default function LocaleSwitcherSelect({ defaultValue, label }: Props) {
     const pathname = usePathname();
     const params = useParams();
 
+    console.log(params);
+
     function onSelectChange(nextLocale: string) {
         router.replace(
             // @ts-expect-error -- TypeScript will validate that only known `params`
@@ -30,7 +38,10 @@ export default function LocaleSwitcherSelect({ defaultValue, label }: Props) {
 
     return (
         <Select defaultValue={defaultValue} onValueChange={onSelectChange}>
-            <SelectTrigger className="h-8 w-[80px] border-none bg-transparent focus:ring-0 focus:ring-offset-0" aria-label={label}>
+            <SelectTrigger
+                className="h-8 w-[80px] border-none bg-transparent focus:ring-0 focus:ring-offset-0"
+                aria-label={label}
+            >
                 <SelectValue />
             </SelectTrigger>
             <SelectContent>

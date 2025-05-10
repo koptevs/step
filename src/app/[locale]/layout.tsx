@@ -6,7 +6,6 @@ import { routing } from '@/i18n/routing';
 import { inter, geistSans, geistMono, notoSansRegular } from '@/fonts/fonts';
 import { cn } from '@/lib/utils';
 import '@/styles/globals.css';
-import { TopNavbar } from '@/components/top-navbar';
 
 type Props = {
     children: React.ReactNode;
@@ -62,8 +61,6 @@ export default async function RootLayout({
                         enableSystem
                         disableTransitionOnChange
                     >
-                        {' '}
-                        <TopNavbar />
                         {children}
                     </ThemeProvider>
                 </NextIntlClientProvider>

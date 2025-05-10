@@ -1,8 +1,18 @@
 {
+    "Navigation": {
+        "home": "Galvenā",
+        "home-link": "Uz galveno lapu.",
+        "about": "Par mums",
+        "about-link": "Uz par mums lapu.",
+        "services": "Pakalpojumi",
+        "services-description": "<div>STEP</div><p>Beautifully designed components built with Radix UI and Tailwind CSS.</p>"
+    },
     "HomePage": {
         "title": "Sveika Pasaule!",
-        "about": "Uz par mums lapu.",
-        "home-link": "Uz galveno",
+        "description": "<p>LV_This is a basic example that demonstrates the usage of <code>next-intl</code> with the Next.js App Router.</p> <test>Try changing</test> the locale in the top right corner and see how the content changes."
+    },
+    "AboutPage": {
+        "title": "Par mums",
         "description": "<p>LV_This is a basic example that demonstrates the usage of <code>next-intl</code> with the Next.js App Router.</p> <test>Try changing</test> the locale in the top right corner and see how the content changes."
     },
     "Manifest": {
