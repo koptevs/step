@@ -1,4 +1,4 @@
-import { TopNavbar } from '@/components/top-navbar';
+import { TopNavbar } from '@/components/shared';
 import { ReactNode } from 'react';
 
 type Props = {

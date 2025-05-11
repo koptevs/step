@@ -18,7 +18,7 @@ type Props = {
     label: string;
 };
 
-export default function LocaleSwitcherSelect({ defaultValue, label }: Props) {
+export function LocaleSwitcherSelect({ defaultValue, label }: Props) {
     const router = useRouter();
 
     const pathname = usePathname();

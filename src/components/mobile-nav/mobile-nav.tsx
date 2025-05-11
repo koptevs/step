@@ -12,8 +12,8 @@ import { Button } from '../ui/button';
 
 import { Link } from '@/i18n/navigation';
 import NavContent from './nav-content';
-import { ModeToggle } from '@/components/mode-toggle';
-import LocaleSwitcher from '@/components/locale-switcher';
+import { ModeToggle } from '@/components/shared';
+import { LocaleSwitcher } from '@/components/shared';
 
 const MobileNav = () => {
     return (

@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Locale, useTranslations } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import { use } from 'react';
-import { TopNavbar } from '@/components/top-navbar';
+import { TopNavbar } from '@/components/shared';
 
 export const metadata: Metadata = {
     title: 'Home',

@@ -16,9 +16,9 @@ import {
     NavigationMenuTrigger,
     navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
-import { ModeToggle } from '@/components/mode-toggle';
+import { ModeToggle } from '@/components/shared';
 import MobileNav from '@/components/mobile-nav/mobile-nav';
-import LocaleSwitcher from '@/components/locale-switcher';
+import { LocaleSwitcher } from '@/components/shared';
 
 const components: { title: string; href: string; description: string }[] = [
     {

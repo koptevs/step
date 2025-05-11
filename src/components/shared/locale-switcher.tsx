@@ -1,9 +1,9 @@
 import { routing } from '@/i18n/routing';
 import { Globe } from 'lucide-react';
 import { useLocale } from 'next-intl';
-import LocaleSwitcherSelect from './locale-switcher-select';
+import { LocaleSwitcherSelect } from './locale-switcher-select';
 
-export default function LocaleSwitcher({ withGlobe }: { withGlobe?: boolean }) {
+export function LocaleSwitcher({ withGlobe }: { withGlobe?: boolean }) {
     const locale = useLocale();
 
     return (
