@@ -28,6 +28,32 @@ export const notoSansRegular = localFont({
     // weight: "100 900",
 });
 
+// export const notoSans = localFont({
+//     src: [
+//         {
+//             path: './local/Noto-Sans-regular.woff',
+//             weight: '400',
+//             style: 'normal',
+//         },
+//         {
+//             path: './local/Noto-Sans-italic.woff',
+//             weight: '400',
+//             style: 'italic',
+//         },
+//         {
+//             path: './local/Noto-Sans-700.woff',
+//             weight: '700',
+//             style: 'normal',
+//         },
+//         {
+//             path: './local/Noto-Sans-700italic.woff',
+//             weight: '700',
+//             style: 'italic',
+//         },
+//     ],
+//     variable: '--font-noto-sans',
+// });
+
 // in any file:
 // import { lusitana } from '@/app/ui/fonts';
 // <p className={`${lusitana.className} text-xl text-gray-800 md:text-3xl md:leading-normal`} >

@@ -3,7 +3,7 @@ import { Locale, NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
-import { inter, geistSans, geistMono, notoSansRegular } from '@/fonts/fonts';
+import { inter, geistSans, geistMono, notoSansRegular } from '@/fonts';
 import { cn } from '@/lib/utils';
 import '@/styles/globals.css';
 
@@ -47,7 +47,7 @@ export default async function RootLayout({
             {/* <body className={`${inter.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}> */}
             <body
                 className={cn(
-                    inter.className,
+                    geistMono.className,
                     'text-[15px] antialiased',
                     notoSansRegular.variable,
                     geistSans.variable,

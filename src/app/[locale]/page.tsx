@@ -25,7 +25,8 @@ export default function Home({ params }: Props) {
         <>
             {/* <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20"> */}
             <TopNavbar />
-            <main className="container mx-auto px-2 font-[family-name:var(--font-inter)]">
+            <main className="container mx-auto px-2 font-[family-name:var(--font-noto-sans-regular)]">
+                {/* <main className="container mx-auto px-2 font-[family-name:var(--font-inter)]"> */}
                 <h1 className="text-2xl font-bold">{t('title')}</h1>
                 {t.rich('description', {
                     p: (chunks) => <p className="mt-4">{chunks}</p>,
@@ -36,7 +37,10 @@ export default function Home({ params }: Props) {
                         <code className="font-bold">{chunks}</code>
                     ),
                 })}
-                <Button className="bg-indigo-800 font-bold">
+                <Button
+                    suppressHydrationWarning
+                    className="bg-indigo-800 font-bold"
+                >
                     <Image
                         className="dark:invert"
                         src="/vercel.svg"
