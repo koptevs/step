@@ -1,47 +1,71 @@
 {
     "Navigation": {
-        "home": "Home",
-        "home-link": "Go to the home page",
-        "about": "About",
-        "about-link": "Go to the about page",
+        "home": {
+            "title": "Home",
+            "description": "Go to the home page"
+        },
+        "dashboard": {
+            "title": "Dashboard",
+            "description": "Go to the dashboard"
+        },
+        "about": {
+            "title": "About",
+            "description": "Go to the about page"
+        },
         "services": {
             "title": "Services",
             "description": "<div>STEP</div><p>Beautifully designed components built with Radix UI and Tailwind CSS.</p>",
             "design": {
                 "title": "Design",
-                "description": ""
+                "description": "Design_description"
             },
             "development": {
                 "title": "Development",
-                "description": ""
+                "description": "Development_descriprion"
             },
             "support": {
                 "title": "Support",
-                "description": ""
+                "description": "Support_description"
+            }
+        },
+        "components": {
+            "title": "Components",
+            "description": "<div>STEP</div><p>Beautifully designed components built with Radix UI and Tailwind CSS.</p>",
+            "alert-dialog": {
+                "title": "Alert Dialog",
+                "description": "Design_description"
+            },
+            "development": {
+                "title": "Development",
+                "description": "Development_descriprion"
+            },
+            "support": {
+                "title": "Support",
+                "description": "Support_description"
             }
         }
     },
     "HomePage": {
         "title": "Home page",
-        "description": "<p>EN_This is a basic example that demonstrates the usage of <code>next-intl</code> with the Next.js App Router.</p> <test>Try changing</test> the locale in the top right corner and see how the content changes."
+        "description": ""
     },
     "AboutPage": {
         "title": "About us",
-        "description": "<p>EN_This is a basic example that demonstrates the usage of <code>next-intl</code> with the Next.js App Router.</p> <test>Try changing</test> the locale in the top right corner and see how the content changes."
+        "description": ""
     },
     "Manifest": {
         "name": "Step app"
     },
     "RootLayoutMeta": {
-        "title": "Step app",
-        "description": "Step application"
+        "title": "Step app en",
+        "description": "Step application en"
     },
     "NotFoundPage": {
-        "description": "Please double-check the browser address bar or use the navigation to go to a known page.",
-        "title": "Page not found"
+        "title": "Page not found",
+        "description": "en_Please double-check the browser address bar or use the navigation to go to a known page."
     },
     "ModeToggle": {
-        "screen-reader-text": "",
+        "screen-reader-text": "Site color mode - Light",
         "light": "Light",
         "dark": "Dark",
         "system": "System"

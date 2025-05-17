@@ -1,33 +1,57 @@
 {
     "Navigation": {
-        "home": "Galvenā",
-        "home-link": "Uz galveno lapu.",
-        "about": "Par mums",
-        "about-link": "Uz par mums lapu.",
+        "home": {
+            "title": "Galvenā",
+            "description": "Uz galveno lapu"
+        },
+        "dashboard": {
+            "title": "Panelis",
+            "description": "Uz paneli lapu."
+        },
+        "about": {
+            "title": "Par mums",
+            "description": "Uz par mums lapu."
+        },
         "services": {
             "title": "Pakalpojumi",
             "description": "<div>STEP</div><p>Beautifully designed components built with Radix UI and Tailwind CSS.</p>",
             "design": {
                 "title": "Dizains",
-                "description": ""
+                "description": "Dizains_description"
             },
             "development": {
                 "title": "Izstrāde",
-                "description": ""
+                "description": "Izstrāde_descriprion"
             },
             "support": {
                 "title": "Atbalsts",
-                "description": ""
+                "description": "Atbalsts_description"
+            }
+        },
+        "components": {
+            "title": "Kommponentes",
+            "description": "<div>STEP</div><p>Beautifully designed components built with Radix UI and Tailwind CSS.</p>",
+            "alert-dialog": {
+                "title": "Alert Dialogs",
+                "description": "Dizains_description"
+            },
+            "development": {
+                "title": "Izstrāde",
+                "description": "Izstrāde_descriprion"
+            },
+            "support": {
+                "title": "Atbalsts",
+                "description": "Atbalsts_description"
             }
         }
     },
     "HomePage": {
         "title": "Mājas lapa",
-        "description": "<p>LV_This is a basic example that demonstrates the usage of <code>next-intl</code> with the Next.js App Router.</p> <test>Try changing</test> the locale in the top right corner and see how the content changes."
+        "description": ""
     },
     "AboutPage": {
         "title": "Par mums",
-        "description": "<p>LV_This is a basic example that demonstrates the usage of <code>next-intl</code> with the Next.js App Router.</p> <test>Try changing</test> the locale in the top right corner and see how the content changes."
+        "description": ""
     },
     "Manifest": {
         "name": "Step app"
@@ -37,11 +61,11 @@
         "description": "Step application lv"
     },
     "NotFoundPage": {
-        "description": "Please double-check the browser address bar or use the navigation to go to a known page.",
-        "title": "Lapa neeksistē"
+        "title": "Lapa neeksistē",
+        "description": "lv_Please double-check the browser address bar or use the navigation to go to a known page."
     },
     "ModeToggle": {
-        "screen-reader-text": "",
+        "screen-reader-text": "Vietnes tēma - Gaiša",
         "light": "Gaiša",
         "dark": "Tumša",
         "system": "Sistema"

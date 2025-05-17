@@ -1,0 +1,213 @@
+{
+    "Navigation": {
+        "home": {
+            "title": {
+                "ru": "Главная",
+                "lv": "Galvenā",
+                "en": "Home"
+            },
+            "description": {
+                "ru": "На главную страницу",
+                "lv": "Uz galveno lapu",
+                "en": "Go to the home page"
+            }
+        },
+        "dashboard": {
+            "title": {
+                "ru": "Панель управления",
+                "lv": "Panelis",
+                "en": "Dashboard"
+            },
+            "description": {
+                "ru": "Панель управления",
+                "lv": "Uz paneli lapu.",
+                "en": "Go to the dashboard"
+            }
+        },
+        "about": {
+            "title": {
+                "ru": "О нас",
+                "lv": "Par mums",
+                "en": "About"
+            },
+            "description": {
+                "ru": "На страницу о нас.",
+                "lv": "Uz par mums lapu.",
+                "en": "Go to the about page"
+            }
+        },
+        "services": {
+            "title": {
+                "ru": "Услуги",
+                "lv": "Pakalpojumi",
+                "en": "Services"
+            },
+            "description": {
+                "ru": "<div>STEP</div><p>Симпатишно сдизайнированные компоненты на основе Radix UI и Tailwind CSS.</p>",
+                "lv": "<div>STEP</div><p>Beautifully designed components built with Radix UI and Tailwind CSS.</p>",
+                "en": "<div>STEP</div><p>Beautifully designed components built with Radix UI and Tailwind CSS.</p>"
+            },
+            "design": {
+                "title": {
+                    "ru": "Дизайн",
+                    "lv": "Dizains",
+                    "en": "Design"
+                },
+                "description": {
+                    "ru": "Дизайн_description",
+                    "lv": "Dizains_description",
+                    "en": "Design_description"
+                }
+            },
+            "development": {
+                "title": {
+                    "ru": "Разработка",
+                    "lv": "Izstrāde",
+                    "en": "Development"
+                },
+                "description": {
+                    "ru": "Разработка_descriprion",
+                    "lv": "Izstrāde_descriprion",
+                    "en": "Development_descriprion"
+                }
+            },
+            "support": {
+                "title": {
+                    "ru": "Поддержка",
+                    "lv": "Atbalsts",
+                    "en": "Support"
+                },
+                "description": {
+                    "ru": "Поддержка_description",
+                    "lv": "Atbalsts_description",
+                    "en": "Support_description"
+                }
+            }
+        },
+        "components": {
+            "title": {
+                "ru": "Компоненты",
+                "lv": "Kommponentes",
+                "en": "Components"
+            },
+            "description": {
+                "ru": "<div>STEP</div><p>Симпатишно сдизайнированные компоненты на основе Radix UI и Tailwind CSS.</p>",
+                "lv": "<div>STEP</div><p>Beautifully designed components built with Radix UI and Tailwind CSS.</p>",
+                "en": "<div>STEP</div><p>Beautifully designed components built with Radix UI and Tailwind CSS.</p>"
+            },
+            "alert-dialog": {
+                "title": {
+                    "ru": "Алерт диалог",
+                    "lv": "Alert Dialogs",
+                    "en": "Alert Dialog"
+                },
+                "description": {
+                    "ru": "Дизайн_description",
+                    "lv": "Dizains_description",
+                    "en": "Design_description"
+                }
+            },
+            "development": {
+                "title": {
+                    "ru": "Разработка",
+                    "lv": "Izstrāde",
+                    "en": "Development"
+                },
+                "description": {
+                    "ru": "Разработка_descriprion",
+                    "lv": "Izstrāde_descriprion",
+                    "en": "Development_descriprion"
+                }
+            },
+            "support": {
+                "title": {
+                    "ru": "Поддержка",
+                    "lv": "Atbalsts",
+                    "en": "Support"
+                },
+                "description": {
+                    "ru": "Поддержка_description",
+                    "lv": "Atbalsts_description",
+                    "en": "Support_description"
+                }
+            }
+        }
+    },
+    "HomePage": {
+        "title": {
+            "ru": "Главная страница",
+            "lv": "Mājas lapa",
+            "en": "Home page"
+        },
+        "description": {
+            "ru": "<p>Реализация также выполнять существенных развития. <code>next-intl</code> with the Next.js App Router.</p> <test>Try changing</test> the locale in the top right corner and see how the content changes.",
+            "lv": "",
+            "en": ""
+        }
+    },
+    "AboutPage": {
+        "title": {
+            "ru": "О нас",
+            "lv": "Par mums",
+            "en": "About us"
+        },
+        "description": {
+            "ru": "<p>Реализация также выполнять существенных развития.<code>next-intl</code>также выполнять существенных развития.</p> <test>Try changing</test> Реализация также выполнять существенных развития..",
+            "lv": "",
+            "en": ""
+        }
+    },
+    "Manifest": {
+        "name": {
+            "ru": "Step app",
+            "lv": "Step app",
+            "en": "Step app"
+        }
+    },
+    "RootLayoutMeta": {
+        "title": {
+            "ru": "Step app ru",
+            "lv": "Step app lv",
+            "en": "Step app en"
+        },
+        "description": {
+            "ru": "Step application ru",
+            "lv": "Step application lv",
+            "en": "Step application en"
+        }
+    },
+    "NotFoundPage": {
+        "title": {
+            "ru": "Страница не найдена.",
+            "lv": "Lapa neeksistē",
+            "en": "Page not found"
+        },
+        "description": {
+            "ru": "ru_Please double-check the browser address bar or use the navigation to go to a known page.",
+            "lv": "lv_Please double-check the browser address bar or use the navigation to go to a known page.",
+            "en": "en_Please double-check the browser address bar or use the navigation to go to a known page."
+        }
+    },
+    "ModeToggle": {
+        "screen-reader-text": {
+            "ru": "Цветовая схема сайта - Светлая",
+            "lv": "Vietnes tēma - Gaiša",
+            "en": "Site color mode - Light"
+        },
+        "light": {
+            "ru": "Светлая",
+            "lv": "Gaiša",
+            "en": "Light"
+        },
+        "dark": {
+            "ru": "Тёмная",
+            "lv": "Tumša",
+            "en": "Dark"
+        },
+        "system": {
+            "ru": "Системная",
+            "lv": "Sistema",
+            "en": "System"
+        }
+    }
+}

@@ -8,7 +8,10 @@
         "start": "next start",
         "lint": "next lint",
         "format": "prettier --write src/app/",
-        "format:check": "prettier --check src/app/"
+        "format:check": "prettier --check src/app/",
+        "del:i18n-msg": "del-cli ./messages/ru.json ./messages/lv.json ./messages/en.json",
+        "gen:i18n-msg": "node ./messages/parse-messages.mjs",
+        "gm": "node ./messages/parse-messages.mjs"
     },
     "dependencies": {
         "@radix-ui/react-dialog": "^1.1.13",

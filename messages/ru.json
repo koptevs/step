@@ -1,30 +1,52 @@
 {
     "Navigation": {
-        "home": "Главная",
-        "home-link": "На главную страницу",
-        "about": "О нас",
-        "about-link": "На страницу о нас.",
+        "home": {
+            "title": "Главная",
+            "description": "На главную страницу"
+        },
+        "dashboard": {
+            "title": "Панель управления",
+            "description": "Панель управления"
+        },
+        "about": {
+            "title": "О нас",
+            "description": "На страницу о нас."
+        },
         "services": {
             "title": "Услуги",
             "description": "<div>STEP</div><p>Симпатишно сдизайнированные компоненты на основе Radix UI и Tailwind CSS.</p>",
             "design": {
                 "title": "Дизайн",
-                "description": ""
+                "description": "Дизайн_description"
             },
             "development": {
                 "title": "Разработка",
-                "description": ""
+                "description": "Разработка_descriprion"
             },
             "support": {
                 "title": "Поддержка",
-                "description": ""
+                "description": "Поддержка_description"
+            }
+        },
+        "components": {
+            "title": "Компоненты",
+            "description": "<div>STEP</div><p>Симпатишно сдизайнированные компоненты на основе Radix UI и Tailwind CSS.</p>",
+            "alert-dialog": {
+                "title": "Алерт диалог",
+                "description": "Дизайн_description"
+            },
+            "development": {
+                "title": "Разработка",
+                "description": "Разработка_descriprion"
+            },
+            "support": {
+                "title": "Поддержка",
+                "description": "Поддержка_description"
             }
         }
     },
     "HomePage": {
         "title": "Главная страница",
-        "about": "На страницу о нас.",
-        "home-link": "На главную",
         "description": "<p>Реализация также выполнять существенных развития. <code>next-intl</code> with the Next.js App Router.</p> <test>Try changing</test> the locale in the top right corner and see how the content changes."
     },
     "AboutPage": {
@@ -39,12 +61,11 @@
         "description": "Step application ru"
     },
     "NotFoundPage": {
-        "description": "Please double-check the browser address bar or use the navigation to go to a known page.",
-        "title": "Страница не найдена."
+        "title": "Страница не найдена.",
+        "description": "ru_Please double-check the browser address bar or use the navigation to go to a known page."
     },
-
     "ModeToggle": {
-        "screen-reader-text": "",
+        "screen-reader-text": "Цветовая схема сайта - Светлая",
         "light": "Светлая",
         "dark": "Тёмная",
         "system": "Системная"
