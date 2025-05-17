@@ -8,14 +8,14 @@ import {
     SheetTitle,
 } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
-import { Button } from '../ui/button';
+import { Button } from '@/components/ui/button';
 
 import { Link } from '@/i18n/navigation';
 import NavContent from './nav-content';
 import { ModeToggle } from '@/components/shared';
 import { LocaleSwitcher } from '@/components/shared';
 
-const MobileNav = () => {
+export const MobileNav = () => {
     return (
         <div className="ml-4 flex w-full items-center justify-end sm:hidden">
             <Sheet>
@@ -58,5 +58,3 @@ const MobileNav = () => {
         </div>
     );
 };
-
-export default MobileNav;

@@ -17,50 +17,50 @@ import {
     navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
 import { ModeToggle } from '@/components/shared';
-import MobileNav from '@/components/mobile-nav/mobile-nav';
+import { MobileNav } from '@/components/shared';
 import { LocaleSwitcher } from '@/components/shared';
-
-const components: { title: string; href: string; description: string }[] = [
-    {
-        title: 'Alert Dialog',
-        href: '/docs/primitives/alert-dialog',
-        description:
-            'A modal dialog that interrupts the user with important content and expects a response.',
-    },
-    {
-        title: 'Hover Card',
-        href: '/docs/primitives/hover-card',
-        description:
-            'For sighted users to preview content available behind a link.',
-    },
-    {
-        title: 'Progress',
-        href: '/docs/primitives/progress',
-        description:
-            'Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.',
-    },
-    {
-        title: 'Scroll-area',
-        href: '/docs/primitives/scroll-area',
-        description: 'Visually or semantically separates content.',
-    },
-    {
-        title: 'Tabs',
-        href: '/docs/primitives/tabs',
-        description:
-            'A set of layered sections of content—known as tab panels—that are displayed one at a time.',
-    },
-    {
-        title: 'Tooltip',
-        href: '/docs/primitives/tooltip',
-        description:
-            'A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.',
-    },
-];
 
 export function TopNavbar() {
     const pathname = usePathname();
     const t = useTranslations('Navigation');
+
+    const components: { title: string; href: string; description: string }[] = [
+        {
+            title: t('components.alert-dialog.title'),
+            href: '/docs/primitives/alert-dialog',
+            description:
+                'A modal dialog that interrupts the user with important content and expects a response.',
+        },
+        {
+            title: 'Hover Card',
+            href: '/docs/primitives/hover-card',
+            description:
+                'For sighted users to preview content available behind a link.',
+        },
+        {
+            title: 'Progress',
+            href: '/docs/primitives/progress',
+            description:
+                'Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.',
+        },
+        {
+            title: 'Scroll-area',
+            href: '/docs/primitives/scroll-area',
+            description: 'Visually or semantically separates content.',
+        },
+        {
+            title: 'Tabs',
+            href: '/docs/primitives/tabs',
+            description:
+                'A set of layered sections of content—known as tab panels—that are displayed one at a time.',
+        },
+        {
+            title: 'Tooltip',
+            href: '/docs/primitives/tooltip',
+            description:
+                'A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.',
+        },
+    ];
     return (
         <nav className="container mx-auto flex h-[56px] justify-between px-2">
             {/* <div className="flex items-center">LOGO</div> */}
@@ -83,16 +83,17 @@ export function TopNavbar() {
                 <NavigationMenuList>
                     {' '}
                     <NavigationMenuItem>
-                        <Link href="/" passHref>
-                            <NavigationMenuLink
-                                title={t('home-link')}
-                                className={cn(navigationMenuTriggerStyle(), {
-                                    'font-bold underline': pathname === '/',
-                                })}
-                            >
-                                {t('home')}
-                            </NavigationMenuLink>
-                        </Link>
+                        <NavigationMenuLink
+                            asChild
+                            title={t('home.description')}
+                            className={cn(navigationMenuTriggerStyle(), {
+                                'font-bold underline': pathname === '/',
+                            })}
+                        >
+                            <Link href="/" passHref>
+                                {t('home.title')}
+                            </Link>
+                        </NavigationMenuLink>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
                         <NavigationMenuTrigger
@@ -161,7 +162,7 @@ export function TopNavbar() {
                     </NavigationMenuItem>
                     <NavigationMenuItem>
                         <NavigationMenuTrigger>
-                            Components
+                            {t('components.title')}
                         </NavigationMenuTrigger>
                         <NavigationMenuContent>
                             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
@@ -178,26 +179,27 @@ export function TopNavbar() {
                         </NavigationMenuContent>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                        <Link href="/dashboard" passHref>
-                            <NavigationMenuLink
-                                className={navigationMenuTriggerStyle()}
-                            >
-                                Dashboard
-                            </NavigationMenuLink>
-                        </Link>
+                        <NavigationMenuLink
+                            asChild
+                            className={navigationMenuTriggerStyle()}
+                        >
+                            <Link href="/dashboard" passHref>
+                                {t('dashboard.title')}
+                            </Link>
+                        </NavigationMenuLink>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                        <Link href="/about" passHref>
-                            <NavigationMenuLink
-                                title={t('about-link')}
-                                className={cn(navigationMenuTriggerStyle(), {
-                                    'font-bold underline':
-                                        pathname === '/about',
-                                })}
-                            >
-                                {t('about')}
-                            </NavigationMenuLink>
-                        </Link>
+                        <NavigationMenuLink
+                            asChild
+                            title={t('about.description')}
+                            className={cn(navigationMenuTriggerStyle(), {
+                                'font-bold underline': pathname === '/about',
+                            })}
+                        >
+                            <Link href="/about" passHref>
+                                {t('about.title')}
+                            </Link>
+                        </NavigationMenuLink>
                     </NavigationMenuItem>
                 </NavigationMenuList>
                 <div className="ml-8"></div>
